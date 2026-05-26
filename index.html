@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flyttmannalaget</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="mall.css"> 
+</head>
+
+<body id="grad"> 
+  
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="#" class="logo">
+        <img src="bil.png" alt="" style="max-height: 2rem; margin-right: 10px;">
+        <h3>Flyttmannalaget</h3> 
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#tjanster" class="smooth-scroll">Tjänster</a>
+        <a href="#priser" class="smooth-scroll">Priser</a>
+        <a href="#om-oss" class="smooth-scroll">Om oss</a>
+        <a href="#offert" class="smooth-scroll contact-button">Offert</a>
+        <a href="#kontakt" class="smooth-scroll contact-button">Kontakta oss</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <h1 class="block-effect" style="--td: 1.2s">
+      <div class="block-reveal" style="--bc: #1165bf; --d: .1s">Flyttmannalaget</div>
+      <div class="block-reveal" style="--bc: #073f7b; --d: .5s">Din partner för stora flyttar och långa vägar</div>
+    </h1>
+  </header>
+
+  <section class="section-box">
+    <div class="info-cards">
+      <div class="card">
+        <h3>Snabba leveranser</h3>
+        <p>Vi garanterar snabb och säker leverans av dina tillhörigheter.</p>
+      </div>
+      <div class="card">
+        <h3>Stora transporter</h3>
+        <p>Våra större släp rymmer mer, vilket sparar tid, pengar och är mer hållbart för klimatet.</p>
+      </div>
+      <div class="card">
+        <h3>Erfarna medarbetare</h3>
+        <p>Vårt team har lång erfarenhet av att hantera alla typer av flyttar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tjanster" class="section-box">
+    <h2 class="text-center">Våra Tjänster</h2>
+    <div class="service-container">
+      <div class="service-image">
+        <img src="last.jpg" alt="CE-Lastbil" style="width: 100%; min-height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: block;">
+      </div>
+      <div class="service-description">
+        <h3>Transport med CE-Lastbil</h3>
+        <p>Vi erbjuder professionella transporter med CE-lastbilar som är anpassade för att hantera stora och tunga laster. Vårt team har lång erfarenhet och säkerställer att dina varor transporteras tryggt och effektivt.</p>
+        
+        <h3 style="margin-top: 20px;">Tjänsterna inkluderar:</h3>
+        <ul class="service-list">
+          <li>Säkra och punktliga leveranser</li>
+          <li>Hantering av stora volymer</li>
+          <li>Specialanpassade transporter</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="priser" class="section-box">
+    <h2 class="text-center">Priser för CE-lastbilstjänster</h2>
+    
+    <div class="info-cards">
+      <div class="card">
+        <h3>Godstransport</h3>
+        <p><strong>Pris:</strong> från 800 kr/timme</p>
+        <p>Snabb och säker transport för tungt gods.</p>
+      </div>
+      <div class="card">
+        <h3>Distribution</h3>
+        <p><strong>Pris:</strong> från 900 kr/timme</p>
+        <p>Effektiv leverans till flera destinationer.</p>
+      </div>
+      <div class="card">
+        <h3>Maskintransport</h3>
+        <p><strong>Fast pris:</strong> 2500 kr</p>
+        <p>Specialiserad transport för tung utrustning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="om-oss" class="section-box">
+    <h2 class="text-center">Om oss</h2>
+    <div class="text-content">
+      <p>På Flyttmannalaget är vi ett dedikerat team som arbetar för att göra din flytt så enkel och smidig som möjligt. Vi erbjuder pålitliga och professionella transporttjänster för både små och stora flyttar, oavsett om det handlar om en lägenhet, ett hus eller specialtransporter.</p>
+    </div>
+  </section>
+
+  <section id="offert" class="section-box">
+    <div class="form-container">
+      <h2 class="text-center">Offertförfrågan</h2>
+
+      <div class="form-steps-indicator">
+        <div class="step active" id="step-1-indicator">1</div>
+        <div class="step" id="step-2-indicator">2</div>
+        <div class="step" id="step-3-indicator">3</div>
+        <div class="step" id="step-4-indicator">4</div>
+        <div class="step" id="step-5-indicator">5</div>
+      </div>
+
+      <form id="offert-form" onsubmit="submitForm(event)">
+        <div class="form-step active" id="step-1">
+          <h3>Steg 1: Personuppgifter</h3>
+          <div class="form-group">
+            <label for="firstname">Förnamn:</label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Efternamn:</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-postadress:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="next-btn" onclick="nextStep()">Nästa</button>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-2">
+          <h3>Steg 2: Adressuppgifter</h3>
+          <div class="form-group">
+            <label for="addressFrom">Adress Från:</label>
+            <input type="text" id="addressFrom" name="addressFrom" required>
+          </div>
+          <div class="form-group">
+            <label for="addressTo">Adress Till:</label>
+            <input type="text" id="addressTo" name="addressTo" required>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="prev-btn" onclick="prevStep()">Förra</button>
+            <button type="button" class="next-btn" onclick="nextStep()">Nästa</button>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-3">
+          <h3>Steg 3: Flyttinformation</h3>
+          <div class="form-group">
+            <label for="distance">Avstånd i kilometer:</label>
+            <input type="number" id="distance" name="distance" min="0" required>
+          </div>
+          <div class="form-group">
+            <label for="numRoomsFrom">Antal rum (nuvarande):</label>
+            <select id="numRoomsFrom" name="roomsFrom" required>
+              <option value="1">1 rum</option>
+              <option value="2">2 rum</option>
+              <option value="3">3 rum</option>
+            </select>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="prev-btn" onclick="prevStep()">Förra</button>
+            <button type="button" class="next-btn" onclick="nextStep()">Nästa</button>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-4">
+          <h3>Steg 4: Beräkning</h3>
+          <div id="priceDetails" style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
+            <p>Här är din preliminära offert:</p>
+            <div id="priceResult" style="font-size: 1.5rem; font-weight: bold; color: #073f7b; margin: 15px 0;">Klicka på knappen för att beräkna</div>
+            <div id="priceBreakdown" style="color: #64748b;"></div>
+          </div>
+          <button type="button" class="price-btn" id="calculatePrice" style="width: 100%; margin-bottom: 20px;">Beräkna pris</button>
+          <div class="btn-group">
+            <button type="button" class="prev-btn" onclick="prevStep()">Förra</button>
+            <button type="button" class="next-btn" onclick="nextStep()">Nästa Steg</button>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-5">
+          <h3>Steg 5: Bekräftelse</h3>
+          <div class="summary-container" style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <h4 style="margin-bottom: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Sammanfattning:</h4>
+            <p><strong>Namn:</strong> <span id="summary-firstname"></span></p>
+            <p><strong>Totalt pris:</strong> <span id="summary-priceResult"></span></p>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="prev-btn" onclick="prevStep()">Förra</button>
+            <button type="submit" class="next-btn submit-btn" style="background-color: #10b981;">Skicka Offert</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer id="kontakt" class="premium-footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        
+        <div class="footer-col brand-col">
+          <h2 class="footer-logo">Flyttmannalaget</h2>
+          <p class="footer-bio">Din pålitliga partner för stora flyttar och tunga transporter. Vi kör säkert, snabbt och med miljön i åtanke.</p>
+        </div>
+
+        <div class="footer-col links-col">
+          <h3>Snabblänkar</h3>
+          <ul>
+            <li><a href="#tjanster">Våra Tjänster</a></li>
+            <li><a href="#priser">Priser</a></li>
+            <li><a href="#om-oss">Om oss</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h3>Kontakt</h3>
+          <p><strong>Tel:</strong> 042 544 82</p>
+          <p><strong>E-post:</strong> info@4capital.se</p>
+          <p><strong>Adress:</strong><br>Henckels Torg 4, Helsingborg</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.form-step');
+    const stepIndicators = document.querySelectorAll('.step');
+
+    function showStep(step) {
+      steps.forEach((formStep, index) => {
+        formStep.classList.toggle('active', index === step);
+        stepIndicators[index].classList.toggle('active', index === step);
+        stepIndicators[index].classList.toggle('completed', index < step);
+      });
+    }
+
+    function nextStep() {
+      if (validateForm()) { 
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        }
+        if (currentStep === 4) { 
+           updateSummary();
+        }
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function updateSummary() {
+      document.getElementById('summary-firstname').innerText = document.getElementById('firstname').value;
+      document.getElementById('summary-priceResult').innerText = document.getElementById('priceResult').innerText;
+    }
+
+    document.getElementById('calculatePrice').addEventListener('click', () => {
+      const distance = document.getElementById('distance').value;
+      if(!distance) {
+          alert("Fyll i avstånd först!");
+          return;
+      }
+      const basePrice = 500;
+      const distanceCost = distance * 20; 
+      const totalPrice = basePrice + distanceCost;
+
+      document.getElementById('priceResult').innerHTML = `${totalPrice} SEK`;
+      document.getElementById('priceBreakdown').innerHTML = `Grundavgift: ${basePrice} SEK<br>Avstånd: ${distanceCost} SEK`;
+    });
+
+    showStep(currentStep);
+
+    function validateForm() {
+      const inputs = document.querySelectorAll('.form-step.active input, .form-step.active select');
+      let valid = true;
+      inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value) {
+          input.style.border = '2px solid red';
+          valid = false;
+        } else {
+          input.style.border = '1px solid #cbd5e1';
+        }
+      });
+      return valid;
+    }
+
+    function submitForm(event) {
+      event.preventDefault(); 
+      
+      const submitButton = document.querySelector('.submit-btn');
+      submitButton.innerText = "Skickar..."; 
+      submitButton.disabled = true;
+
+      setTimeout(() => {
+        alert("Tack! Din offertförfrågan har skickats. (Demo-läge)");
+        document.getElementById('offert-form').reset();
+        
+        document.getElementById('priceResult').innerHTML = "Klicka på knappen för att beräkna";
+        document.getElementById('priceBreakdown').innerHTML = "";
+        
+        currentStep = 0;
+        showStep(currentStep);
+
+        submitButton.innerText = "Skicka Offert";
+        submitButton.disabled = false;
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
